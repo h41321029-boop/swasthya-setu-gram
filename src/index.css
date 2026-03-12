@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 160 20% 98%;
+    --foreground: 174 30% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 174 30% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 174 30% 15%;
+    --primary: 174 60% 36%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 200 40% 94%;
+    --secondary-foreground: 200 40% 25%;
+    --muted: 174 15% 94%;
+    --muted-foreground: 174 10% 45%;
+    --accent: 152 50% 92%;
+    --accent-foreground: 152 50% 20%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 174 20% 88%;
+    --input: 174 20% 88%;
+    --ring: 174 60% 36%;
+    --radius: 0.75rem;
+
+    /* Role colors */
+    --patient: 174 60% 36%;
+    --patient-foreground: 0 0% 100%;
+    --panchayat: 38 80% 50%;
+    --panchayat-foreground: 0 0% 100%;
+    --pharmacist: 152 55% 40%;
+    --pharmacist-foreground: 0 0% 100%;
+    --asha: 280 55% 55%;
+    --asha-foreground: 0 0% 100%;
+    --doctor: 200 65% 45%;
+    --doctor-foreground: 0 0% 100%;
+
+    /* SOS */
+    --sos: 0 72% 51%;
+    --sos-foreground: 0 0% 100%;
+
+    /* Status */
+    --success: 152 60% 40%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 10%;
+
+    /* Shadows */
+    --shadow-2xs: 0 1px 2px 0 hsl(174 20% 15% / 0.03);
+    --shadow-xs: 0 1px 3px 0 hsl(174 20% 15% / 0.06);
+    --shadow-sm: 0 2px 6px -1px hsl(174 20% 15% / 0.08);
+    --shadow-md: 0 4px 12px -2px hsl(174 20% 15% / 0.1);
+    --shadow-lg: 0 10px 24px -4px hsl(174 20% 15% / 0.12);
+    --shadow-xl: 0 20px 40px -8px hsl(174 20% 15% / 0.15);
+    --shadow-2xl: 0 25px 50px -12px hsl(174 20% 15% / 0.25);
+
+    /* Sidebar */
+    --sidebar-background: 174 30% 97%;
+    --sidebar-foreground: 174 30% 15%;
+    --sidebar-primary: 174 60% 36%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 174 25% 92%;
+    --sidebar-accent-foreground: 174 30% 15%;
+    --sidebar-border: 174 20% 90%;
+    --sidebar-ring: 174 60% 36%;
+  }
+
+  .dark {
+    --background: 174 20% 8%;
+    --foreground: 174 10% 92%;
+    --card: 174 20% 12%;
+    --card-foreground: 174 10% 92%;
+    --popover: 174 20% 12%;
+    --popover-foreground: 174 10% 92%;
+    --primary: 174 55% 45%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 200 25% 18%;
+    --secondary-foreground: 200 20% 85%;
+    --muted: 174 15% 18%;
+    --muted-foreground: 174 10% 60%;
+    --accent: 152 30% 18%;
+    --accent-foreground: 152 30% 85%;
+    --destructive: 0 62% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 174 15% 22%;
+    --input: 174 15% 22%;
+    --ring: 174 55% 45%;
+    --sidebar-background: 174 20% 10%;
+    --sidebar-foreground: 174 10% 90%;
+    --sidebar-primary: 174 55% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 174 15% 16%;
+    --sidebar-accent-foreground: 174 10% 90%;
+    --sidebar-border: 174 15% 20%;
+    --sidebar-ring: 174 55% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-border rounded-full;
+}
